@@ -6,8 +6,8 @@ services:
     links:
       - "elasticsearch"
     ports:
-      - "24224:24220"
-      - "24224:24220/udp"
+      - "24224:24224"
+      - "24224:24224/udp"
     logging:
         driver: "json-file"
         options:
@@ -29,4 +29,3 @@ services:
       - "elasticsearch"
     ports:
       - "5601:5601"
-

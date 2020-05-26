@@ -2,14 +2,12 @@ version: '2'
 services:
 
   fluentd:
-    build: ./fluentd
-    volumes:
-      - ./fluentd/conf:/fluentd/etc
+    image: vevo/fluentd-elasticsearch
     links:
       - "elasticsearch"
     ports:
-      - "24224:24224"
-      - "24224:24224/udp"
+      - "24224:24220"
+      - "24224:24220/udp"
     logging:
         driver: "json-file"
         options:
